@@ -2,6 +2,38 @@
 // VÖLKEL & V-COIL Website JavaScript
 // ==========================================
 
+// initial theme loading
+function initTheme() {
+    const body = document.body;
+
+    // checking for selection of a theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+    } else {
+        // no theme selected, check for system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (prefersDark) {
+            body.classList.add('dark-mode');
+        }
+
+        // saving the preference
+        localStorage.setItem('theme', prefersDark ? 'dark' : 'light');
+    }
+}
+
+// run theme initialization
+initTheme();
+
+// handling button clicks
+
+
+
 // Loader
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
