@@ -77,6 +77,121 @@ body {
     overflow-x: hidden;
 }
 
+body.dark-mode {
+    /* dark bg colors */
+    --bg-main: #1a1d29;
+    --bg-dark: #13151f;
+
+    /* dark neomorphism shadows */
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-light: rgba(255, 255, 255, 0.05);
+
+    /* dark text colors */
+    --text-primary: #E8EDF2;
+    --text-secondary: #B8C5D6;
+    --text-light: #8A96A6;
+
+    /* accent colors */
+    --primary-orange: #FF6B35;
+    --primary-pink: #FF69B4;
+    --primary-cyan: #00CED1;
+
+    /* neomorphism shadows for dark mode */
+    --shadow-neu: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    --shadow-neu-inset: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    --shadow-neu-hover:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+/* container for search and theme buttons */
+.theme-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+/* toggle button styles */
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--bg-main);
+    box-shadow: var(--shadow-neu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover effect */
+.theme-toggle:hover {
+    box-shadow: var(--shadow-neu-inset);
+    transform: scale(0.95);
+}
+
+/* click effect */
+.theme-toggle:active {
+    transform: scale(0.9);
+}
+
+.theme-toggle svg {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* sun icon default state */
+.sun-icon {
+    color: #FDB813;
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* moon icon default state */
+.moon-icon {
+    color: #4A5568;
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+/* Switch icons when dark mode is active */
+body.dark-mode .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+body.dark-mode .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* ripple effect on click */
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gradient);
+    opacity: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.theme-toggle:active::before {
+    opacity: 0.3;
+    transform: scale(2);
+}
+
+
 img {
     max-width: 100%;
     height: auto;
