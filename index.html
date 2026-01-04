@@ -18,6 +18,62 @@
                 }
             })();
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBCP63F5G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EBCP63F5G6', {'send_page_view': true, 'anonymize_ip': false, 'link_attribution': true, 'allow_enhanced_conversions': true});
+
+      // Page view event
+      gtag('event', 'page_view', {
+        'page_title' : document.title,
+        'page_location' : window.location.href,
+        'page_path': window.location.pathname,
+        'page_referrer': document.referrer
+      });
+
+    //   tracking when user scrolls
+    window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+        if (scrollPercent > 25 && !window.scroll25) {
+                window.scroll25 = true;
+                gtag('event', 'scroll', { 'percent_scrolled': 25 });
+            }
+        if (scrollPercent > 50 && !window.scroll50) {
+                window.scroll50 = true;
+                gtag('event', 'scroll', { 'percent_scrolled': 50 });
+            }
+        if (scrollPercent > 75 && !window.scroll75) {
+                window.scroll75 = true;
+                gtag('event', 'scroll', { 'percent_scrolled': 75 });
+            }
+        if (scrollPercent > 90 && !window.scroll100) {
+                window.scroll100 = true;
+                gtag('event', 'scroll', { 'percent_scrolled': 100 });
+            }
+    });
+
+    //  tracking clicks on product cards
+    document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const productName = this.querySelector('h3').textContent;
+                    
+                    gtag('event', 'product_click', {
+                        'product_name': productName,
+                        'event_category': 'engagement',
+                        'event_label': productName
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Loading Animation -->
