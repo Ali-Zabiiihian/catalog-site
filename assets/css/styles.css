@@ -190,11 +190,13 @@ button {
     gap: var(--spacing-md);
 }
 
+.logo {
+    display: flex;
+    height: 90px;
+    width: 90px;
+}
+
 .logo img {
-    height: 60px;
-    width: auto;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-neu);
     padding: var(--spacing-xs);
     background: var(--bg-main);
 }
