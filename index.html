@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابزار تراش سایش - بورس ابزارهای تراشکاری اندازه‌گیری و کنترل کیفی</title>
+    <meta name="description" content="تامین‌کننده رسمی محصولات V-COIL و VÖLKEL در ایران - سیستم درج رزوه، قلاویز، پیچ‌تراش و ابزارآلات تراشکاری">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="./assets/images/logo-persian.jpg" alt="ابزار تراش سایش">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">خانه</a></li>
+                    <li><a href="#products">محصولات</a></li>
+                    <li><a href="#catalogs">کاتالوگ‌ها</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                </ul>
+                <div class="search-icon" id="searchToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-content">
+            <button class="close-search" id="closeSearch">&times;</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="جستجوی محصولات...">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="glitch" data-text="ابزار تراش سایش">ابزار تراش سایش</h1>
+                    <p class="tagline">بورس ابزارهای تراشکاری اندازه‌گیری و کنترل کیفی</p>
+                    <p class="hero-subtitle">نمایندگی رسمی محصولات V-COIL و VÖLKEL در ایران</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>محصولات اصل آلمانی با گارانتی</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>تحویل سریع از انبار تهران</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>مشاوره تخصصی رایگان</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>بیش از 15 سال تجربه</span>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#products" class="btn btn-primary">مشاهده محصولات</a>
+                        <a href="#catalogs" class="btn btn-secondary">دانلود کاتالوگ</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-content">
+                            <h3>V-COIL</h3>
+                            <p>سیستم درج رزوه</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-content">
+                            <h3>VÖLKEL</h3>
+                            <p>ابزار رزوه‌کاری</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-content">
+                            <h3>از 1915</h3>
+                            <p>بیش از 100 سال تجربه</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">محصولات متنوع</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">مشتری راضی</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">سال تجربه</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">درصد رضایت</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase -->
+    <section class="brand-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>برندهای همکار ما</h2>
+                <p>نمایندگی رسمی برترین برندهای جهانی</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo-box">
+                        <h3>V-COIL</h3>
+                        <span>THREAD INSERT SYSTEM</span>
+                    </div>
+                    <p>سیستم درج رزوه با کیفیت بالا - ساخت آلمان</p>
+                    <ul class="brand-features">
+                        <li>✓ مقاومت در برابر حرارت و خورندگی</li>
+                        <li>✓ قابل استفاده مجدد</li>
+                        <li>✓ تعمیر رزوه‌های آسیب‌دیده</li>
+                    </ul>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo-box">
+                        <h3>VÖLKEL</h3>
+                        <span>THREADING SOLUTIONS</span>
+                    </div>
+                    <p>ابزارهای رزوه‌کاری - از سال 1915</p>
+                    <ul class="brand-features">
+                        <li>✓ بیش از 100 سال تجربه</li>
+                        <li>✓ ساخت آلمان</li>
+                        <li>✓ کیفیت برتر صنعتی</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>محصولات ما</h2>
+                <p>انتخاب از برترین ابزارآلات تراشکاری</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">همه محصولات</button>
+                <button class="filter-btn" data-filter="vcoil">V-COIL</button>
+                <button class="filter-btn" data-filter="volkel-taps">قلاویز VÖLKEL</button>
+                <button class="filter-btn" data-filter="volkel-dies">پیچ‌تراش VÖLKEL</button>
+                <button class="filter-btn" data-filter="accessories">متفرقه</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- V-COIL Products -->
+                <div class="product-card" data-category="vcoil" data-name="سیستم درج رزوه V-COIL نوع S">
+                    <div class="product-ribbon">محبوب</div>
+                    <div class="product-image">
+                        <div class="product-badge">V-COIL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>درج رزوه آزاد - نوع S</h3>
+                        <p>ساخته شده از فولاد کروم نیکل ضد زنگ، برای تقویت و تعمیر رزوه‌های آسیب‌دیده</p>
+                        <div class="product-features">
+                            <span>مقاوم در برابر حرارت</span>
+                            <span>ضد خورندگی</span>
+                            <span>نصب آسان</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">مواد:</span>
+                                <span class="spec-value">فولاد کروم نیکل</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">کاربرد:</span>
+                                <span class="spec-value">تعمیر رزوه</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vcoil" data-name="درج رزوه خود قفل‌شونده V-COIL نوع SL">
+                    <div class="product-image">
+                        <div class="product-badge">V-COIL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <path d="M 50 25 L 50 75" stroke="currentColor" stroke-width="4"/>
+                                <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>درج رزوه خود قفل‌شونده - نوع SL</h3>
+                        <p>برای کاربردهای تحت ارتعاش و ضربه، با قابلیت قفل‌شوندگی پیچ</p>
+                        <div class="product-features">
+                            <span>ضد لق شدن</span>
+                            <span>مناسب ارتعاش</span>
+                            <span>قابل استفاده مجدد</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">نوع:</span>
+                                <span class="spec-value">خود قفل‌شونده</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">مزیت:</span>
+                                <span class="spec-value">گشتاور قفل</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <!-- VÖLKEL Hand Taps -->
+                <div class="product-card" data-category="volkel-taps" data-name="قلاویز دستی VÖLKEL استاندارد متری">
+                    <div class="product-ribbon">پرفروش</div>
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="30" y="20" width="10" height="60" fill="currentColor"/>
+                                <circle cx="35" cy="85" r="3" fill="currentColor"/>
+                                <line x1="45" y1="25" x2="70" y2="25" stroke="currentColor" stroke-width="2"/>
+                                <line x1="45" y1="35" x2="70" y2="35" stroke="currentColor" stroke-width="2"/>
+                                <line x1="45" y1="45" x2="70" y2="45" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قلاویز دستی - استاندارد متری</h3>
+                        <p>قلاویز دستی با کیفیت صنعتی برای رزوه‌کاری دقیق M, MF</p>
+                        <div class="product-features">
+                            <span>کیفیت آلمانی</span>
+                            <span>استاندارد DIN</span>
+                            <span>دقت بالا</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">15-43</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">استاندارد:</span>
+                                <span class="spec-value">M, MF</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="volkel-taps" data-name="قلاویز دستی BSW و UNC">
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="30" y="20" width="10" height="60" fill="currentColor"/>
+                                <circle cx="35" cy="85" r="3" fill="currentColor"/>
+                                <line x1="45" y1="30" x2="65" y2="30" stroke="currentColor" stroke-width="2"/>
+                                <line x1="45" y1="40" x2="65" y2="40" stroke="currentColor" stroke-width="2"/>
+                                <line x1="45" y1="50" x2="65" y2="50" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قلاویز دستی - BSW و UNC</h3>
+                        <p>قلاویز استاندارد انگلیسی و آمریکایی</p>
+                        <div class="product-features">
+                            <span>استاندارد BSW</span>
+                            <span>استاندارد UNC</span>
+                            <span>ساخت آلمان</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">44-70</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="volkel-taps" data-name="قلاویز ماشینی VÖLKEL">
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="35" y="15" width="8" height="70" fill="currentColor"/>
+                                <polygon points="35,15 43,15 50,8 42,8" fill="currentColor"/>
+                                <line x1="48" y1="25" x2="68" y2="25" stroke="currentColor" stroke-width="3"/>
+                                <line x1="48" y1="40" x2="68" y2="40" stroke="currentColor" stroke-width="3"/>
+                                <line x1="48" y1="55" x2="68" y2="55" stroke="currentColor" stroke-width="3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قلاویز ماشینی</h3>
+                        <p>برای استفاده در ماشین‌آلات CNC و دستگاه‌های رزوه‌کاری</p>
+                        <div class="product-features">
+                            <span>پوشش رنگی</span>
+                            <span>دقت CNC</span>
+                            <span>سرعت بالا</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">77-134</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="volkel-taps" data-name="قلاویز فرمینگ بدون براده">
+                    <div class="product-ribbon">جدید</div>
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="35" y="15" width="8" height="70" fill="currentColor"/>
+                                <circle cx="57" cy="30" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="57" cy="45" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="57" cy="60" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قلاویز فرمینگ (بدون براده)</h3>
+                        <p>رزوه‌کاری بدون تولید براده با سرعت بالا</p>
+                        <div class="product-features">
+                            <span>بدون براده</span>
+                            <span>سرعت بالا</span>
+                            <span>عمر طولانی</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">161-166</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <!-- VÖLKEL Dies -->
+                <div class="product-card" data-category="volkel-dies" data-name="پیچ‌تراش گرد VÖLKEL">
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="4"/>
+                                <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <line x1="30" y1="50" x2="70" y2="50" stroke="currentColor" stroke-width="2"/>
+                                <line x1="50" y1="30" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>پیچ‌تراش گرد</h3>
+                        <p>برای رزوه‌کاری خارجی - استاندارد متری و اینچی</p>
+                        <div class="product-features">
+                            <span>انواع اندازه</span>
+                            <span>دقت بالا</span>
+                            <span>مقاوم</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">173-198</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="volkel-dies" data-name="پیچ‌تراش شش‌ضلعی">
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <polygon points="50,20 70,35 70,65 50,80 30,65 30,35" fill="none" stroke="currentColor" stroke-width="4"/>
+                                <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>پیچ‌تراش شش‌ضلعی</h3>
+                        <p>پیچ‌تراش با نگهدارنده شش‌ضلعی</p>
+                        <div class="product-features">
+                            <span>نصب راحت</span>
+                            <span>گشتاور بالا</span>
+                            <span>استحکام عالی</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">199-222</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <!-- Sets & Accessories -->
+                <div class="product-card" data-category="accessories" data-name="ست قلاویز و پیچ‌تراش">
+                    <div class="product-ribbon">ویژه</div>
+                    <div class="product-image">
+                        <div class="product-badge">VÖLKEL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="20" y="30" width="60" height="45" rx="5" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <line x1="35" y1="45" x2="65" y2="45" stroke="currentColor" stroke-width="2"/>
+                                <line x1="35" y1="55" x2="65" y2="55" stroke="currentColor" stroke-width="2"/>
+                                <line x1="35" y1="65" x2="65" y2="65" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="50" cy="25" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ست ابزار رزوه‌کاری</h3>
+                        <p>ست کامل قلاویز و پیچ‌تراش با جعبه</p>
+                        <div class="product-features">
+                            <span>کامل</span>
+                            <span>جعبه‌دار</span>
+                            <span>انواع سایز</span>
+                        </div>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">صفحات کاتالوگ:</span>
+                                <span class="spec-value">223-256</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories" data-name="ابزار نصب V-COIL">
+                    <div class="product-image">
+                        <div class="product-badge">V-COIL</div>
+                        <div class="product-placeholder">
+                            <svg viewBox="0 0 100 100" class="tool-icon">
+                                <rect x="25" y="35" width="12" height="50" fill="currentColor"/>
+                                <path d="M 42 40 L 75 40 L 75 80 L 42 80 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                                <circle cx="58" cy="60" r="5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ابزار نصب و خارج‌سازی</h3>
+                        <p>ابزار تخصصی نصب و خارج‌سازی درج‌های رزوه V-COIL</p>
+                        <div class="product-features">
+                            <span>دستی و ماشینی</span>
+                            <span>متنوع</span>
+                            <span>مقاوم</span>
+                        </div>
+                        <a href="#contact" class="btn-view-catalog">درخواست قیمت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogs Section -->
+    <section id="catalogs" class="catalogs">
+        <div class="container">
+            <div class="section-header">
+                <h2>کاتالوگ‌های محصولات</h2>
+                <p>دانلود کاتالوگ‌های کامل محصولات</p>
+            </div>
+            <div class="catalogs-grid">
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <rect x="25" y="15" width="50" height="70" rx="3"/>
+                            <line x1="35" y1="30" x2="65" y2="30"/>
+                            <line x1="35" y1="45" x2="65" y2="45"/>
+                            <line x1="35" y1="60" x2="65" y2="60"/>
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>کاتالوگ V-COIL</h3>
+                    <p class="catalog-desc">سیستم کامل درج رزوه V-COIL</p>
+                    <div class="catalog-info">
+                        <span class="catalog-pages">76 صفحه</span>
+                        <span class="catalog-size">PDF - 8.5 MB</span>
+                    </div>
+                    <div class="catalog-features">
+                        <span>✓ درج رزوه نوع S</span>
+                        <span>✓ درج رزوه خود قفل SL</span>
+                        <span>✓ ابزار نصب</span>
+                        <span>✓ جداول فنی کامل</span>
+                    </div>
+                    <a href="#contact" class="btn-download">درخواست کاتالوگ</a>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <rect x="25" y="15" width="50" height="70" rx="3"/>
+                            <line x1="35" y1="30" x2="65" y2="30"/>
+                            <line x1="35" y1="45" x2="65" y2="45"/>
+                            <line x1="35" y1="60" x2="65" y2="60"/>
+                            <rect x="40" y="20" width="8" height="50" fill="currentColor"/>
+                            <circle cx="44" cy="75" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>کاتالوگ VÖLKEL</h3>
+                    <p class="catalog-desc">ابزارهای کامل رزوه‌کاری VÖLKEL</p>
+                    <div class="catalog-info">
+                        <span class="catalog-pages">271 صفحه</span>
+                        <span class="catalog-size">PDF - 15.2 MB</span>
+                    </div>
+                    <div class="catalog-features">
+                        <span>✓ قلاویز دستی و ماشینی</span>
+                        <span>✓ پیچ‌تراش گرد و شش‌ضلعی</span>
+                        <span>✓ قلاویز فرمینگ</span>
+                        <span>✓ ست‌های کامل</span>
+                    </div>
+                    <a href="#contact" class="btn-download">درخواست کاتالوگ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>چرا ابزار تراش سایش؟</h2>
+                <p>مزایای خرید از ما</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🏆</div>
+                    <h3>کیفیت تضمین‌شده</h3>
+                    <p>تمامی محصولات اصل و با گارانتی معتبر از برندهای V-COIL و VÖLKEL آلمان</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🚚</div>
+                    <h3>تحویل سریع</h3>
+                    <p>ارسال به سراسر کشور از انبار تهران با سریع‌ترین روش ممکن</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>قیمت مناسب</h3>
+                    <p>بهترین قیمت با توجه به کیفیت محصولات و واردات مستقیم</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔧</div>
+                    <h3>پشتیبانی تخصصی</h3>
+                    <p>مشاوره و راهنمایی رایگان توسط کارشناسان مجرب در انتخاب محصول مناسب</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📦</div>
+                    <h3>موجودی انبار</h3>
+                    <p>بیش از 1000 قلم کالا آماده تحویل فوری از انبار تهران</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚙️</div>
+                    <h3>تنوع محصول</h3>
+                    <p>طیف کاملی از ابزارآلات رزوه‌کاری، اندازه‌گیری و کنترل کیفی</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="applications">
+        <div class="container">
+            <div class="section-header">
+                <h2>کاربردهای محصولات</h2>
+                <p>استفاده در صنایع مختلف</p>
+            </div>
+            <div class="applications-grid">
+                <div class="app-card">
+                    <h3>🏭 صنایع خودروسازی</h3>
+                    <p>تعمیر رزوه شمع، سنسور اکسیژن، پیچ تخلیه روغن</p>
+                </div>
+                <div class="app-card">
+                    <h3>✈️ صنایع هوافضا</h3>
+                    <p>تقویت رزوه در قطعات بحرانی با دقت بالا</p>
+                </div>
+                <div class="app-card">
+                    <h3>⚡ صنایع برق</h3>
+                    <p>رزوه‌کاری تجهیزات الکتریکی و تابلوها</p>
+                </div>
+                <div class="app-card">
+                    <h3>🏥 تجهیزات پزشکی</h3>
+                    <p>ساخت و تعمیر تجهیزات پزشکی با استانداردهای بالا</p>
+                </div>
+                <div class="app-card">
+                    <h3>🔩 ماشین‌سازی</h3>
+                    <p>تولید و تعمیر ماشین‌آلات صنعتی</p>
+                </div>
+                <div class="app-card">
+                    <h3>🛠️ تعمیرگاه‌ها</h3>
+                    <p>تعمیر رزوه‌های آسیب‌دیده به جای تعویض قطعه</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>درباره ابزار تراش سایش</h2>
+                    <p class="about-intro">ما با بیش از 15 سال تجربه در زمینه تأمین و توزیع ابزارآلات تراشکاری، اندازه‌گیری و کنترل کیفی، افتخار نمایندگی رسمی برندهای معتبر جهانی <strong>V-COIL</strong> و <strong>VÖLKEL</strong> آلمان را داریم.</p>
+                    
+                    <div class="about-mission">
+                        <h3>ماموریت ما</h3>
+                        <p>تامین بهترین ابزارآلات تراشکاری با کیفیت اروپایی، خدمات مشاوره تخصصی و پشتیبانی کامل برای صنایع مختلف کشور</p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon-box">✓</div>
+                            <div>
+                                <h4>کیفیت تضمین‌شده</h4>
+                                <p>واردات مستقیم از آلمان با گارانتی اصالت کالا</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon-box">✓</div>
+                            <div>
+                                <h4>تحویل سریع</h4>
+                                <p>ارسال به سراسر کشور از انبار مرکزی تهران</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon-box">✓</div>
+                            <div>
+                                <h4>پشتیبانی تخصصی</h4>
+                                <p>مشاوره رایگان توسط کارشناسان مجرب</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="brands">
+                        <h3>برندهای نمایندگی</h3>
+                        <div class="brand-logos">
+                            <div class="brand-logo-item">
+                                <h4>V-COIL</h4>
+                                <p>THREAD INSERT SYSTEM</p>
+                            </div>
+                            <div class="brand-logo-item">
+                                <h4>VÖLKEL</h4>
+                                <p>THREADING SOLUTIONS<br><small>Since 1915</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card card-1">
+                        <div class="stat-box">
+                            <div class="stat-num">100+</div>
+                            <div class="stat-text">سال سابقه برند</div>
+                        </div>
+                    </div>
+                    <div class="about-card card-2">
+                        <div class="stat-box">
+                            <div class="stat-num">1000+</div>
+                            <div class="stat-text">محصول متنوع</div>
+                        </div>
+                    </div>
+                    <div class="about-card card-3">
+                        <div class="stat-box">
+                            <div class="stat-num">15+</div>
+                            <div class="stat-text">سال تجربه</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>تماس با ما</h2>
+                <p>ما آماده پاسخگویی به سوالات شما هستیم</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>تلفن</h4>
+                            <p dir="ltr">021-12345678</p>
+                            <p dir="ltr">0912-1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>ایمیل</h4>
+                            <p>info@abzartarash.ir</p>
+                            <p>sales@abzartarash.ir</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>آدرس</h4>
+                            <p>تهران، خیابان نمونه، پلاک ۱۲۳</p>
+                            <p>کدپستی: 1234567890</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>ساعات کاری</h4>
+                            <p>شنبه تا پنج‌شنبه</p>
+                            <p>8:00 صبح - 17:00 عصر</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>شبکه‌های اجتماعی</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link" title="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" title="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" title="WhatsApp">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" title="Telegram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>فرم تماس</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">نام و نام خانوادگی *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" required>
+                            <label for="company">نام شرکت *</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">ایمیل *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">تلفن *</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">موضوع *</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">پیام شما *</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ارسال پیام</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="logo-persian.jpg" alt="ابزار تراش سایش" class="footer-logo">
+                    <p>بورس ابزارهای تراشکاری اندازه‌گیری و کنترل کیفی</p>
+                    <p class="footer-tagline">نمایندگی رسمی V-COIL و VÖLKEL در ایران</p>
+                </div>
+                <div class="footer-col">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#products">محصولات</a></li>
+                        <li><a href="#catalogs">کاتالوگ‌ها</a></li>
+                        <li><a href="#about">درباره ما</a></li>
+                        <li><a href="#contact">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>محصولات</h4>
+                    <ul>
+                        <li><a href="#products">سیستم V-COIL</a></li>
+                        <li><a href="#products">قلاویز VÖLKEL</a></li>
+                        <li><a href="#products">پیچ‌تراش VÖLKEL</a></li>
+                        <li><a href="#products">ست‌های ابزار</a></li>
+                        <li><a href="#products">متفرقه</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تماس با ما</h4>
+                    <ul>
+                        <li dir="ltr">تلفن: 021-12345678</li>
+                        <li dir="ltr">موبایل: 0912-1234567</li>
+                        <li>ایمیل: info@abzartarash.ir</li>
+                        <li>تهران، خیابان نمونه، پلاک ۱۲۳</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1404 ابزار تراش سایش. تمامی حقوق محفوظ است.</p>
+                <p class="footer-credits">طراحی شده با ❤️ برای صنعت ایران</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
