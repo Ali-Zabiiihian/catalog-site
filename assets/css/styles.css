@@ -157,7 +157,7 @@ body.dark-mode {
 
 /* moon icon default state */
 .moon-icon {
-    color: #4A5568;
+    color: #7C3AED;
     opacity: 0;
     transform: rotate(180deg) scale(0);
 }

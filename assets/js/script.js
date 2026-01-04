@@ -30,10 +30,6 @@ function initTheme() {
 // run theme initialization
 initTheme();
 
-// handling button clicks
-
-
-
 // Loader
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
@@ -41,6 +37,41 @@ window.addEventListener('load', () => {
         loader.classList.add('hidden');
     }, 1000);
 });
+
+
+// handling button clicks
+// getting the theme toggle button
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // handle button click
+    themeToggle.addEventListener('click', function(){
+        // toggle the dark mode class
+        body.classList.toggle('dark-mode');
+
+        // checking the current theme
+        isDark = body.classList.contains('dark-mode');
+
+        // saving the preference to localStorage
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+        // adding a smooth transition effect
+        addSmoothTransition();
+    });
+});
+
+// adding a smooth transition function
+function addSmoothTransition() {
+    const body = document.body;
+
+    // adding a temporary transition 
+    body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+
+    // removing the transition after some time
+    setTimeout(() => {body.style.transition = '';}, 300);
+}
+
 
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menuToggle');
