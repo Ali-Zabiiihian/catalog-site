@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+            // preventing the flash of the wrong theme
+            (function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savadTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+            })();
+    </script>
 </head>
 <body>
     <!-- Loading Animation -->
