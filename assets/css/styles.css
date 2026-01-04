@@ -77,6 +77,10 @@ body {
     overflow-x: hidden;
 }
 
+/* ==========================================
+   Dark Mode Styles
+   ========================================== */
+
 body.dark-mode {
     /* dark bg colors */
     --bg-main: #1a1d29;
@@ -191,6 +195,58 @@ body.dark-mode .moon-icon {
     transform: scale(2);
 }
 
+/* search modal in dark mode */
+body.dark-mode .search-modal {
+    background: rgba(0,0,0,0.95);
+}
+
+body.dark-mode .search-content {
+    background: var(--bg-main);
+    border-color: var(--shadow-light);
+}
+
+/* input placeholder */
+body.dark-mode input::placeholder, body.dark-mode textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.5;
+}
+
+/* forms and inputs */
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* loader/spinner */
+body.dark-mode .loader-wrapper {
+    background: var(--bg-main);
+}
+
+/* custom scrollbar (chrome, edge) */
+body.dark-mode::--webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-dark);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+    background: var(--bg-main);
+    border-radius: 5px;
+    border: 2px solid var(--bg-dark);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
+}
+
+/* product cards in dark mode */
+body.dark-mode .product-card {
+    background: var(--bg-main);
+}
+
+body.dark-mode .product-card:hover {
+    transform: translateY(-5px);
+}
 
 img {
     max-width: 100%;
